@@ -43,7 +43,7 @@ def out(sc):
     
   
     
-  s.enter(0.1, 1, out, (sc,))
+  s.enter(5, 1, out, (sc,))
 
-s.enter(0.1, 1, out, (s,))
+s.enter(5, 1, out, (s,))
 s.run()
