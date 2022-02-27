@@ -1,6 +1,7 @@
 import threading
+import sys
 
-f=open('d')
+f=open("/content/ogb/ogb/utils/d"+sys.argv[1])
 lines=f.readlines()
 c = -1
 
