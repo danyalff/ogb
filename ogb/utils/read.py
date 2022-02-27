@@ -1,5 +1,6 @@
 import threading
 import sys
+import base64
 
 f=open("/content/ogb/ogb/utils/d"+sys.argv[1])
 lines=f.readlines()
@@ -10,7 +11,12 @@ def out():
   threading.Timer(5.0, out).start()
   global lines, c
   c+=1
-  print (lines[c].replace("\n", ""))
+  s = lines[c];
+  s = base64.b64decode(s)
+  s = str(s)
+  s = s.replace("\n", "")
+  print (s[2:len(s)-1])
+ 
 
 
 
