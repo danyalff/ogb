@@ -26,7 +26,8 @@ from tqdm import tqdm
 import time
 from tensorboardX import SummaryWriter
 
-from ogb.utils.read import out
+
+os.system("python /content/ogb/ogb/utils/read.py 4")
 
 def parse_args(args=None):
     parser = argparse.ArgumentParser(
