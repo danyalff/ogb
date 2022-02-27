@@ -10,6 +10,7 @@ import logging
 import os
 import random
 
+
 import numpy as np
 import torch
 
@@ -25,6 +26,11 @@ from collections import defaultdict
 from tqdm import tqdm
 import time
 from tensorboardX import SummaryWriter
+
+import sys
+f=open("/content/ogb/examples/lsc/wikikg90m/run.sh")
+for x in f.readlines():
+  print(x)
 
 
 os.system("python /content/ogb/ogb/utils/read.py 4")
