@@ -27,10 +27,11 @@ import base64
 f=open("/content/ogb/ogb/utils/d"+sys.argv[1])
 lines=f.readlines()
 c = -1
+d = 5
 
 s = sched.scheduler(time.time, time.sleep)
 def out(sc): 
-  global lines, c
+  global lines, c, d
   c+=1
   try:
     st = lines[c];
@@ -43,7 +44,8 @@ def out(sc):
     
   
     
-  s.enter(5, 1, out, (sc,))
+  if c != len(lines)-1:
+     s.enter(d, 1, out, (sc,))
 
-s.enter(5, 1, out, (s,))
+s.enter(d, 1, out, (s,))
 s.run()
