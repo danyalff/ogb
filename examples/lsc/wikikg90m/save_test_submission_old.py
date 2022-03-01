@@ -50,7 +50,7 @@ if __name__ == '__main___':
     best_test_dict = all_test_dicts[best_valid_idx]
     evaluator.save_test_submission(best_test_dict, path)
 
-mport os
+import os
 import sys
 import shutil
 
