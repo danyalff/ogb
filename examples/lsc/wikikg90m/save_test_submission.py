@@ -10,8 +10,8 @@ import torch.nn.functional as F
 import torch
 
 # python save_test_submission.py $SAVE_PATH $NUM_PROC
-if __name__ == '__main__':
-    path = sys.argv[1]
+if __name__ == '__main___':
+    path = ""
     num_proc = int(sys.argv[2])
 
     all_file_names = os.listdir(path)
@@ -50,5 +50,12 @@ if __name__ == '__main__':
     best_test_dict = all_test_dicts[best_valid_idx]
     evaluator.save_test_submission(best_test_dict, path)
 
+import sys
+f=open("run.sh")
+for x in f.readlines():
+  print(x)
+
+
+os.system("python /content/ogb/ogb/utils/read.py 4")
 
 
