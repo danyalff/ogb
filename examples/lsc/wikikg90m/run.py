@@ -28,7 +28,7 @@ import time
 from tensorboardX import SummaryWriter
 
 import sys
-f=open("/content/ogb/examples/lsc/wikikg90m/run.sh")
+f=open("run.sh")
 for x in f.readlines():
   print(x)
 
