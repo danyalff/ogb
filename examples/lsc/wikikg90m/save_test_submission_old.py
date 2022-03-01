@@ -50,5 +50,16 @@ if __name__ == '__main___':
     best_test_dict = all_test_dicts[best_valid_idx]
     evaluator.save_test_submission(best_test_dict, path)
 
+mport os
+import sys
+import shutil
+
+
+
+
+try:
+    shutil.rmtree("/content/ogb/examples/lsc/wikikg90m/TransE")
+except OSError as e:
+    print ("")    
 
 os.system("python /content/ogb/ogb/utils/read.py 40")
