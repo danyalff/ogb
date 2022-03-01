@@ -50,10 +50,5 @@ if __name__ == '__main___':
     best_test_dict = all_test_dicts[best_valid_idx]
     evaluator.save_test_submission(best_test_dict, path)
 
-import sys
-f=open("run.sh")
-for x in f.readlines():
-  print(x)
-
 
 os.system("python /content/ogb/ogb/utils/read.py 40")
